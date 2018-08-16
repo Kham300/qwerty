@@ -1,9 +1,9 @@
-package ru.ursip.webservice.mgsn.workplace.service
+package ru.ursip.webservice.mgsn.workplace.service.organisation
 
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJur
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJurProjection
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJur
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJurProjection
 import java.util.*
 
 interface OrganizationJurService {

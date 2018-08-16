@@ -1,14 +1,14 @@
-package ru.ursip.webservice.mgsn.workplace.service.impl
+package ru.ursip.webservice.mgsn.workplace.service.organisation.impl
 
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJur
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJurProjection
-import ru.ursip.webservice.mgsn.workplace.model.toProjection
-import ru.ursip.webservice.mgsn.workplace.model.toSpecification
-import ru.ursip.webservice.mgsn.workplace.repository.OrganizationJurDao
-import ru.ursip.webservice.mgsn.workplace.service.OrganizationJurService
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJur
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJurProjection
+import ru.ursip.webservice.mgsn.workplace.model.organistion.toProjection
+import ru.ursip.webservice.mgsn.workplace.model.organistion.toSpecification
+import ru.ursip.webservice.mgsn.workplace.repository.organisation.OrganizationJurDao
+import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationJurService
 import java.util.*
 
 @Service
@@ -20,8 +20,9 @@ class OrganizationJurServiceImpl(private val organizationJurDao: OrganizationJur
     }
 
     override fun update(organizationJur: OrganizationJur): OrganizationJur {
-        if (organizationJur.id != null) return organizationJurDao.save(organizationJur)
-        else throw Exception("Для обновления организации ее id Должен быть не равен NULL")
+        organizationJur.id?.let {
+            return organizationJurDao.save(organizationJur)
+        } ?: throw Exception("Для обновления организации ее id Должен быть не равен NULL")
     }
 
     override fun getAll(filter: OrganizationJurProjection?, pageable: Pageable): Page<OrganizationJur> =

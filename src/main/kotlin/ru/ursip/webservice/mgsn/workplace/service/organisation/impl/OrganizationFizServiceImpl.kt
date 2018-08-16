@@ -1,13 +1,13 @@
-package ru.ursip.webservice.mgsn.workplace.service.impl
+package ru.ursip.webservice.mgsn.workplace.service.organisation.impl
 
 import au.com.console.jpaspecificationdsl.like
 import au.com.console.jpaspecificationdsl.or
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
-import ru.ursip.webservice.mgsn.workplace.model.*
-import ru.ursip.webservice.mgsn.workplace.repository.OrganizationFizDao
-import ru.ursip.webservice.mgsn.workplace.service.OrganizationFizService
+import ru.ursip.webservice.mgsn.workplace.model.organistion.*
+import ru.ursip.webservice.mgsn.workplace.repository.organisation.OrganizationFizDao
+import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationFizService
 import java.util.*
 
 @Service

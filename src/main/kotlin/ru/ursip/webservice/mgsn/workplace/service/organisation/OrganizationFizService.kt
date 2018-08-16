@@ -1,10 +1,10 @@
-package ru.ursip.webservice.mgsn.workplace.service
+package ru.ursip.webservice.mgsn.workplace.service.organisation
 
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationFiz
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationFizExternal
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationFizProjection
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFiz
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFizExternal
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFizProjection
 import java.util.*
 
 interface OrganizationFizService {
