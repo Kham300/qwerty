@@ -1,4 +1,4 @@
-package ru.ursip.webservice.mgsn.workplace.model
+package ru.ursip.webservice.mgsn.workplace.model.organistion
 
 import au.com.console.jpaspecificationdsl.and
 import au.com.console.jpaspecificationdsl.like
@@ -198,9 +198,9 @@ data class OrganizationJur(
         var orgHead: String? = null,
 
         @ApiModelProperty("СРО")
-        @OneToMany
+        @OneToMany(cascade = [CascadeType.ALL])
         @JoinColumn(name = "organizationId")
-        var sro: List<OrganizationMembersSro>? = null
+        var sro: MutableList<OrganizationMembersSro>? = null
 )
 
 /**

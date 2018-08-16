@@ -1,4 +1,4 @@
-package ru.ursip.webservice.mgsn.workplace.model
+package ru.ursip.webservice.mgsn.workplace.model.organistion
 
 import io.swagger.annotations.ApiModel
 import io.swagger.annotations.ApiModelProperty

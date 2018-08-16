@@ -1,4 +1,4 @@
-package ru.ursip.webservice.mgsn.workplace.model
+package ru.ursip.webservice.mgsn.workplace.model.organistion
 
 import au.com.console.jpaspecificationdsl.and
 import au.com.console.jpaspecificationdsl.like
