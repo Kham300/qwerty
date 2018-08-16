@@ -1,7 +1,7 @@
-package ru.ursip.webservice.mgsn.workplace.repository
+package ru.ursip.webservice.mgsn.workplace.repository.organisation
 
 import org.springframework.data.repository.CrudRepository
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationMembersSro
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationMembersSro
 import java.util.*
 
 interface OrganizationMembersSroDao : CrudRepository<OrganizationMembersSro, UUID>

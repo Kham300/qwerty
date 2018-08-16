@@ -1,10 +1,9 @@
-package ru.ursip.webservice.mgsn.workplace.repository
+package ru.ursip.webservice.mgsn.workplace.repository.organisation
 
 import org.springframework.data.jpa.repository.EntityGraph
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor
 import org.springframework.data.repository.CrudRepository
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationFiz
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJur
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJur
 import java.util.*
 
 interface OrganizationJurDao : CrudRepository<OrganizationJur, UUID>, JpaSpecificationExecutor<OrganizationJur> {
