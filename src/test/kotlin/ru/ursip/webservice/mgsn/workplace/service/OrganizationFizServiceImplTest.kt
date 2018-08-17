@@ -1,6 +1,7 @@
 package ru.ursip.webservice.mgsn.workplace.service
 
 import io.kotlintest.shouldBe
+import org.activiti.engine.TaskService
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -10,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.domain.PageRequest
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.transaction.annotation.Transactional
+import ru.ursip.webservice.mgsn.workplace.model.activiti.toRepresentation
 import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFiz
 import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFizProjection
 import ru.ursip.webservice.mgsn.workplace.model.organistion.toExternal
@@ -23,6 +25,9 @@ class OrganizationFizServiceImplTest {
 
     @Autowired
     lateinit var organizationFizService: OrganizationFizService
+
+    @Autowired
+    lateinit var taskService: TaskService
 
     @Before
     fun setUp() {
@@ -79,6 +84,18 @@ class OrganizationFizServiceImplTest {
 
     @Test
     fun deleteById() {
+    }
+
+    @Test
+    fun saveInTask() {
+        organizationFizService
+                .saveInTask("132511", "orgJur", TEST_ORGANIZATION_FIZ)
+        val tasks = taskService.createTaskQuery()
+                .taskId("132511")
+                .includeProcessVariables()
+                .list().map { it.toRepresentation() }
+        print(tasks)
+
     }
 }
 

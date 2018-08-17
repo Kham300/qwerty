@@ -1,6 +1,7 @@
 package ru.ursip.webservice.mgsn.workplace.service
 
 import io.kotlintest.shouldBe
+import org.activiti.engine.TaskService
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -10,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.domain.PageRequest
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.transaction.annotation.Transactional
+import ru.ursip.webservice.mgsn.workplace.model.activiti.toRepresentation
 import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJur
 import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJurProjection
 import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationMembersSro
@@ -23,6 +25,9 @@ class OrganizationJurServiceImplTest {
 
     @Autowired
     lateinit var organizationJurService: OrganizationJurService
+
+    @Autowired
+    lateinit var taskService: TaskService
 
     @Before
     fun setUp() {
@@ -72,6 +77,17 @@ class OrganizationJurServiceImplTest {
 
     @Test
     fun deleteById() {
+    }
+
+    @Test
+    fun saveInTask() {
+        organizationJurService.saveInTask("132511", "orgJur", TEST_ORGANIZATION_JUR)
+        val tasks = taskService.createTaskQuery()
+                .taskId("132511")
+                .includeProcessVariables()
+                .list().map { it.toRepresentation() }
+        print(tasks)
+
     }
 }
 
