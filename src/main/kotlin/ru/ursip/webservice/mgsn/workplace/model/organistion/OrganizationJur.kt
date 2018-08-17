@@ -5,12 +5,14 @@ import au.com.console.jpaspecificationdsl.like
 import io.swagger.annotations.ApiModel
 import io.swagger.annotations.ApiModelProperty
 import org.springframework.data.jpa.domain.Specifications
+import java.io.Serializable
 import java.time.LocalDate
 import java.util.*
 import javax.persistence.*
 
 @ApiModel("Юр. лица")
 @Entity
+@Table(name = "organization_jur", schema = "documents")
 data class OrganizationJur(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -201,7 +203,7 @@ data class OrganizationJur(
         @OneToMany(cascade = [CascadeType.ALL])
         @JoinColumn(name = "organizationId")
         var sro: MutableList<OrganizationMembersSro>? = null
-)
+) : Serializable
 
 /**
  * Проекция юр. лица для витрины

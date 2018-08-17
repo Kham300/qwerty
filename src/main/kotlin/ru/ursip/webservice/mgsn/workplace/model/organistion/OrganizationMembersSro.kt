@@ -2,15 +2,14 @@ package ru.ursip.webservice.mgsn.workplace.model.organistion
 
 import io.swagger.annotations.ApiModel
 import io.swagger.annotations.ApiModelProperty
+import java.io.Serializable
 import java.time.LocalDate
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @ApiModel("СРО")
 @Entity
+@Table(name = "organization_members_sro", schema = "documents")
 data class OrganizationMembersSro(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,4 +33,4 @@ data class OrganizationMembersSro(
 
         @ApiModelProperty("Идентификатор организации")
         var organizationId: UUID? = null
-)
+) : Serializable

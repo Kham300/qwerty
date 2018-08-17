@@ -5,15 +5,14 @@ import au.com.console.jpaspecificationdsl.like
 import io.swagger.annotations.ApiModel
 import io.swagger.annotations.ApiModelProperty
 import org.springframework.data.jpa.domain.Specifications
+import java.io.Serializable
 import java.time.LocalDate
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @ApiModel("Физ. лица")
 @Entity
+@Table(name = "organization_fiz", schema = "documents")
 data class OrganizationFiz(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -136,7 +135,7 @@ data class OrganizationFiz(
 
         @ApiModelProperty("Организация")
         var orgNameNorm: String? = null
-)
+) : Serializable
 
 /**
  * Проекция физ. лица для других модулей
