@@ -18,7 +18,7 @@ spring:
       ddl-auto: validate
     properties:
       hibernate:
-        default_schema: documents
+#        default_schema: documents
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc:

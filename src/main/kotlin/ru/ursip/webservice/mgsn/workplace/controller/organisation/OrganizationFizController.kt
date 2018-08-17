@@ -1,4 +1,4 @@
-package ru.ursip.webservice.mgsn.workplace.controller
+package ru.ursip.webservice.mgsn.workplace.controller.organisation
 
 import io.swagger.annotations.*
 import org.springframework.data.domain.Pageable
@@ -6,9 +6,9 @@ import org.springframework.data.web.PageableDefault
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationFiz
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationFizProjection
-import ru.ursip.webservice.mgsn.workplace.service.OrganizationFizService
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFiz
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFizProjection
+import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationFizService
 import java.util.*
 
 @Api(tags = ["Работа с физ. лицами"])
@@ -68,5 +68,11 @@ class OrganizationFizController(private val organizationFizService: Organization
     @PostMapping("/delete")
     fun delete(@ApiParam("Идентификатор") @RequestParam id: UUID) = organizationFizService.deleteById(id)
 
+    @ApiOperation("Сохранение в задачу активти")
+    @PostMapping("/saveInTask")
+    fun saveInTask(@ApiParam("Номер задачи") @RequestParam taskId: String,
+                   @ApiParam("Название переменной") @RequestParam variableName: String,
+                   @ApiParam("Физ.лицо") @RequestBody organizationFiz: OrganizationFiz) =
+            organizationFizService.saveInTask(taskId, variableName, organizationFiz)
 
 }

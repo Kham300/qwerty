@@ -1,4 +1,4 @@
-package ru.ursip.webservice.mgsn.workplace.controller
+package ru.ursip.webservice.mgsn.workplace.controller.organisation
 
 import io.swagger.annotations.*
 import org.springframework.data.domain.Pageable
@@ -6,9 +6,9 @@ import org.springframework.data.web.PageableDefault
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJur
-import ru.ursip.webservice.mgsn.workplace.model.OrganizationJurProjection
-import ru.ursip.webservice.mgsn.workplace.service.OrganizationJurService
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJur
+import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationJurProjection
+import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationJurService
 import java.util.*
 
 @Api(tags = ["Работа с юр. лицами"])
@@ -58,4 +58,11 @@ class OrganizationJurController(private val organizationJurService: Organization
     @ApiOperation("Удаление юр. лица")
     @PostMapping("/delete")
     fun delete(@ApiParam("Идентификатор") @RequestParam id: UUID) = organizationJurService.deleteById(id)
+
+    @ApiOperation("Сохранение в задачу активти")
+    @PostMapping("/saveInTask")
+    fun saveInTask(@ApiParam("Номер задачи") @RequestParam taskId: String,
+                   @ApiParam("Название переменной") @RequestParam variableName: String,
+                   @ApiParam("Юр.лицо") @RequestBody organizationJur: OrganizationJur) =
+            organizationJurService.saveInTask(taskId, variableName, organizationJur)
 }
