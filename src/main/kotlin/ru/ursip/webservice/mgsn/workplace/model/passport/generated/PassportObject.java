@@ -1,24 +1,19 @@
-
 package ru.ursip.webservice.mgsn.workplace.model.passport.generated;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * �������� ��� ��������� ������� �������
- * 
+ *
  * <p>Java class for PassportObject complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="PassportObject">
  *   &lt;complexContent>
@@ -344,92 +339,90 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PassportObject", namespace = "http://xmlns.oracle.com/MSG_PassportObject", propOrder = {
-    "isArchive",
-    "objID",
-    "deloNum",
-    "dbType",
-    "inArchiveReason",
-    "inArchiveReasonAdd",
-    "inArchiveDate",
-    "specMark",
-    "constrState",
-    "mapHTMLLong",
-    "mapObjID",
-    "mapRegParams",
-    "objAddress",
-    "buildStartDate",
-    "buildEndDate",
-    "constractPOSDate",
-    "numberOrder",
-    "objName",
-    "objTotalArea",
-    "objLength",
-    "objFloor",
-    "responsibilityLevel",
-    "objkod",
-    "objCategoriesBuild",
-    "stageBuilding",
-    "nfoCode",
-    "fno",
-    "parentName",
-    "typeBuild",
-    "objProjektSeries",
-    "powerName",
-    "powerValue",
-    "metricUnitsName",
-    "objFinSourse",
-    "frontSystem",
-    "objInspector",
-    "objInspectorDep",
-    "objInspectorPosition",
-    "objInspectorOrder",
-    "objInspectorHistory",
-    "objComment",
-    "organization",
-    "organizationBuilder",
-    "organizationGeneral",
-    "organizationCustomer",
-    "organizationAuthor",
-    "organizationOperating",
-    "objCat",
-    "opoReg",
-    "isNoReestr",
-    "governmentExp",
-    "nonGovernmentExp",
-    "ecologicalExp",
-    "projectPresentRem",
-    "projectPresentFl",
-    "apo",
-    "ops",
-    "sen",
-    "ogpn",
-    "axAct",
-    "axActRem",
-    "objHandOver",
-    "objHandOverDate",
-    "objPostAddress",
-    "objAdrStrGK",
-    "objAdrStrGKYur",
-    "objAdrHouseGK",
-    "objAdrKorpGK",
-    "factPowerValue",
-    "objCritRem",
-    "fio",
-    "department",
-    "objCritRemove",
-    "objCritRemoveDate",
-    "objCritRemoveRem",
-    "commission",
-    "rcNum",
-    "rcDate",
-    "rcActNum",
-    "rcActDate",
-    "projCharact"
+        "isArchive",
+        "objID",
+        "deloNum",
+        "dbType",
+        "inArchiveReason",
+        "inArchiveReasonAdd",
+        "inArchiveDate",
+        "specMark",
+        "constrState",
+        "mapHTMLLong",
+        "mapObjID",
+        "mapRegParams",
+        "objAddress",
+        "buildStartDate",
+        "buildEndDate",
+        "constractPOSDate",
+        "numberOrder",
+        "objName",
+        "objTotalArea",
+        "objLength",
+        "objFloor",
+        "responsibilityLevel",
+        "objkod",
+        "objCategoriesBuild",
+        "stageBuilding",
+        "nfoCode",
+        "fno",
+        "parentName",
+        "typeBuild",
+        "objProjektSeries",
+        "powerName",
+        "powerValue",
+        "metricUnitsName",
+        "objFinSourse",
+        "frontSystem",
+        "objInspector",
+        "objInspectorDep",
+        "objInspectorPosition",
+        "objInspectorOrder",
+        "objInspectorHistory",
+        "objComment",
+        "organization",
+        "organizationBuilder",
+        "organizationGeneral",
+        "organizationCustomer",
+        "organizationAuthor",
+        "organizationOperating",
+        "objCat",
+        "opoReg",
+        "isNoReestr",
+        "governmentExp",
+        "nonGovernmentExp",
+        "ecologicalExp",
+        "projectPresentRem",
+        "projectPresentFl",
+        "apo",
+        "ops",
+        "sen",
+        "ogpn",
+        "axAct",
+        "axActRem",
+        "objHandOver",
+        "objHandOverDate",
+        "objPostAddress",
+        "objAdrStrGK",
+        "objAdrStrGKYur",
+        "objAdrHouseGK",
+        "objAdrKorpGK",
+        "factPowerValue",
+        "objCritRem",
+        "fio",
+        "department",
+        "objCritRemove",
+        "objCritRemoveDate",
+        "objCritRemoveRem",
+        "commission",
+        "rcNum",
+        "rcDate",
+        "rcActNum",
+        "rcActDate",
+        "projCharact"
 })
 public class PassportObject {
 
@@ -605,11 +598,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the isArchive property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isIsArchive() {
         return isArchive;
@@ -617,11 +608,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the isArchive property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setIsArchive(Boolean value) {
         this.isArchive = value;
@@ -629,11 +618,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjID() {
         return objID;
@@ -641,11 +628,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjID(String value) {
         this.objID = value;
@@ -653,11 +638,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the deloNum property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDeloNum() {
         return deloNum;
@@ -665,11 +648,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the deloNum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDeloNum(String value) {
         this.deloNum = value;
@@ -677,11 +658,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the dbType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDBType() {
         return dbType;
@@ -689,11 +668,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the dbType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDBType(String value) {
         this.dbType = value;
@@ -701,11 +678,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the inArchiveReason property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInArchiveReason() {
         return inArchiveReason;
@@ -713,11 +688,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the inArchiveReason property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInArchiveReason(String value) {
         this.inArchiveReason = value;
@@ -725,11 +698,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the inArchiveReasonAdd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInArchiveReasonAdd() {
         return inArchiveReasonAdd;
@@ -737,11 +708,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the inArchiveReasonAdd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInArchiveReasonAdd(String value) {
         this.inArchiveReasonAdd = value;
@@ -749,11 +718,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the inArchiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getInArchiveDate() {
         return inArchiveDate;
@@ -761,11 +728,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the inArchiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setInArchiveDate(XMLGregorianCalendar value) {
         this.inArchiveDate = value;
@@ -773,25 +738,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the specMark property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specMark property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecMark().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getSpecMark() {
         if (specMark == null) {
@@ -802,11 +765,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the constrState property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstrState() {
         return constrState;
@@ -814,11 +775,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the constrState property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstrState(String value) {
         this.constrState = value;
@@ -826,11 +785,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the mapHTMLLong property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMapHTMLLong() {
         return mapHTMLLong;
@@ -838,11 +795,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the mapHTMLLong property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMapHTMLLong(String value) {
         this.mapHTMLLong = value;
@@ -850,11 +805,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the mapObjID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMapObjID() {
         return mapObjID;
@@ -862,11 +815,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the mapObjID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMapObjID(String value) {
         this.mapObjID = value;
@@ -874,11 +825,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the mapRegParams property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMapRegParams() {
         return mapRegParams;
@@ -886,11 +835,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the mapRegParams property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMapRegParams(String value) {
         this.mapRegParams = value;
@@ -898,11 +845,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objAddress property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.ObjAddress }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.ObjAddress }
      */
     public PassportObject.ObjAddress getObjAddress() {
         return objAddress;
@@ -910,11 +855,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objAddress property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.ObjAddress }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.ObjAddress }
      */
     public void setObjAddress(PassportObject.ObjAddress value) {
         this.objAddress = value;
@@ -922,11 +865,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the buildStartDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getBuildStartDate() {
         return buildStartDate;
@@ -934,11 +875,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the buildStartDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setBuildStartDate(XMLGregorianCalendar value) {
         this.buildStartDate = value;
@@ -946,11 +885,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the buildEndDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getBuildEndDate() {
         return buildEndDate;
@@ -958,11 +895,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the buildEndDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setBuildEndDate(XMLGregorianCalendar value) {
         this.buildEndDate = value;
@@ -970,11 +905,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the constractPOSDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstractPOSDate() {
         return constractPOSDate;
@@ -982,11 +915,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the constractPOSDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstractPOSDate(String value) {
         this.constractPOSDate = value;
@@ -994,11 +925,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the numberOrder property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNumberOrder() {
         return numberOrder;
@@ -1006,11 +935,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the numberOrder property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNumberOrder(String value) {
         this.numberOrder = value;
@@ -1018,11 +945,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjName() {
         return objName;
@@ -1030,11 +955,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjName(String value) {
         this.objName = value;
@@ -1042,11 +965,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objTotalArea property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjTotalArea() {
         return objTotalArea;
@@ -1054,11 +975,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objTotalArea property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjTotalArea(String value) {
         this.objTotalArea = value;
@@ -1066,11 +985,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjLength() {
         return objLength;
@@ -1078,11 +995,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjLength(String value) {
         this.objLength = value;
@@ -1090,11 +1005,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objFloor property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjFloor() {
         return objFloor;
@@ -1102,11 +1015,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objFloor property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjFloor(String value) {
         this.objFloor = value;
@@ -1114,11 +1025,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the responsibilityLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getResponsibilityLevel() {
         return responsibilityLevel;
@@ -1126,11 +1035,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the responsibilityLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setResponsibilityLevel(String value) {
         this.responsibilityLevel = value;
@@ -1138,11 +1045,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objkod property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjkod() {
         return objkod;
@@ -1150,11 +1055,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objkod property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjkod(String value) {
         this.objkod = value;
@@ -1162,11 +1065,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objCategoriesBuild property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjCategoriesBuild() {
         return objCategoriesBuild;
@@ -1174,11 +1075,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objCategoriesBuild property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjCategoriesBuild(String value) {
         this.objCategoriesBuild = value;
@@ -1186,11 +1085,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the stageBuilding property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getStageBuilding() {
         return stageBuilding;
@@ -1198,11 +1095,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the stageBuilding property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setStageBuilding(String value) {
         this.stageBuilding = value;
@@ -1210,11 +1105,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the nfoCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getNFOCode() {
         return nfoCode;
@@ -1222,11 +1115,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the nfoCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setNFOCode(String value) {
         this.nfoCode = value;
@@ -1234,11 +1125,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the fno property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.FNO }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.FNO }
      */
     public PassportObject.FNO getFNO() {
         return fno;
@@ -1246,11 +1135,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the fno property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.FNO }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.FNO }
      */
     public void setFNO(PassportObject.FNO value) {
         this.fno = value;
@@ -1258,11 +1145,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the parentName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getParentName() {
         return parentName;
@@ -1270,11 +1155,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the parentName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setParentName(String value) {
         this.parentName = value;
@@ -1282,11 +1165,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the typeBuild property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTypeBuild() {
         return typeBuild;
@@ -1294,11 +1175,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the typeBuild property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTypeBuild(String value) {
         this.typeBuild = value;
@@ -1306,11 +1185,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objProjektSeries property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjProjektSeries() {
         return objProjektSeries;
@@ -1318,11 +1195,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objProjektSeries property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjProjektSeries(String value) {
         this.objProjektSeries = value;
@@ -1330,11 +1205,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the powerName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPowerName() {
         return powerName;
@@ -1342,11 +1215,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the powerName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPowerName(String value) {
         this.powerName = value;
@@ -1354,11 +1225,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the powerValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPowerValue() {
         return powerValue;
@@ -1366,11 +1235,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the powerValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPowerValue(String value) {
         this.powerValue = value;
@@ -1378,11 +1245,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the metricUnitsName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMetricUnitsName() {
         return metricUnitsName;
@@ -1390,11 +1255,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the metricUnitsName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMetricUnitsName(String value) {
         this.metricUnitsName = value;
@@ -1402,11 +1265,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objFinSourse property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjFinSourse() {
         return objFinSourse;
@@ -1414,11 +1275,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objFinSourse property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjFinSourse(String value) {
         this.objFinSourse = value;
@@ -1426,11 +1285,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the frontSystem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFrontSystem() {
         return frontSystem;
@@ -1438,11 +1295,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the frontSystem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFrontSystem(String value) {
         this.frontSystem = value;
@@ -1450,11 +1305,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objInspector property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjInspector() {
         return objInspector;
@@ -1462,11 +1315,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objInspector property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjInspector(String value) {
         this.objInspector = value;
@@ -1474,11 +1325,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objInspectorDep property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjInspectorDep() {
         return objInspectorDep;
@@ -1486,11 +1335,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objInspectorDep property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjInspectorDep(String value) {
         this.objInspectorDep = value;
@@ -1498,11 +1345,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objInspectorPosition property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjInspectorPosition() {
         return objInspectorPosition;
@@ -1510,11 +1355,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objInspectorPosition property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjInspectorPosition(String value) {
         this.objInspectorPosition = value;
@@ -1522,11 +1365,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objInspectorOrder property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjInspectorOrder() {
         return objInspectorOrder;
@@ -1534,11 +1375,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objInspectorOrder property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjInspectorOrder(String value) {
         this.objInspectorOrder = value;
@@ -1546,25 +1385,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the objInspectorHistory property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the objInspectorHistory property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getObjInspectorHistory().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
      */
     public List<String> getObjInspectorHistory() {
         if (objInspectorHistory == null) {
@@ -1575,11 +1412,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objComment property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjComment() {
         return objComment;
@@ -1587,11 +1422,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objComment property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjComment(String value) {
         this.objComment = value;
@@ -1599,25 +1432,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the organization property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the organization property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOrganization().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PassportObject.Organization }
-     * 
-     * 
      */
     public List<PassportObject.Organization> getOrganization() {
         if (organization == null) {
@@ -1628,11 +1459,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the organizationBuilder property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.OrganizationBuilder }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.OrganizationBuilder }
      */
     public PassportObject.OrganizationBuilder getOrganizationBuilder() {
         return organizationBuilder;
@@ -1640,11 +1469,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the organizationBuilder property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.OrganizationBuilder }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.OrganizationBuilder }
      */
     public void setOrganizationBuilder(PassportObject.OrganizationBuilder value) {
         this.organizationBuilder = value;
@@ -1652,11 +1479,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the organizationGeneral property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.OrganizationGeneral }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.OrganizationGeneral }
      */
     public PassportObject.OrganizationGeneral getOrganizationGeneral() {
         return organizationGeneral;
@@ -1664,11 +1489,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the organizationGeneral property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.OrganizationGeneral }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.OrganizationGeneral }
      */
     public void setOrganizationGeneral(PassportObject.OrganizationGeneral value) {
         this.organizationGeneral = value;
@@ -1676,11 +1499,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the organizationCustomer property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.OrganizationCustomer }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.OrganizationCustomer }
      */
     public PassportObject.OrganizationCustomer getOrganizationCustomer() {
         return organizationCustomer;
@@ -1688,11 +1509,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the organizationCustomer property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.OrganizationCustomer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.OrganizationCustomer }
      */
     public void setOrganizationCustomer(PassportObject.OrganizationCustomer value) {
         this.organizationCustomer = value;
@@ -1700,11 +1519,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the organizationAuthor property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.OrganizationAuthor }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.OrganizationAuthor }
      */
     public PassportObject.OrganizationAuthor getOrganizationAuthor() {
         return organizationAuthor;
@@ -1712,11 +1529,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the organizationAuthor property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.OrganizationAuthor }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.OrganizationAuthor }
      */
     public void setOrganizationAuthor(PassportObject.OrganizationAuthor value) {
         this.organizationAuthor = value;
@@ -1724,11 +1539,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the organizationOperating property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.OrganizationOperating }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.OrganizationOperating }
      */
     public PassportObject.OrganizationOperating getOrganizationOperating() {
         return organizationOperating;
@@ -1736,11 +1549,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the organizationOperating property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.OrganizationOperating }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.OrganizationOperating }
      */
     public void setOrganizationOperating(PassportObject.OrganizationOperating value) {
         this.organizationOperating = value;
@@ -1748,11 +1559,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objCat property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject.ObjCat }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject.ObjCat }
      */
     public PassportObject.ObjCat getObjCat() {
         return objCat;
@@ -1760,11 +1569,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objCat property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject.ObjCat }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject.ObjCat }
      */
     public void setObjCat(PassportObject.ObjCat value) {
         this.objCat = value;
@@ -1772,25 +1579,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the opoReg property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the opoReg property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOpoReg().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PassportObject.OpoReg }
-     * 
-     * 
      */
     public List<PassportObject.OpoReg> getOpoReg() {
         if (opoReg == null) {
@@ -1801,11 +1606,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the isNoReestr property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getIsNoReestr() {
         return isNoReestr;
@@ -1813,11 +1616,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the isNoReestr property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setIsNoReestr(BigInteger value) {
         this.isNoReestr = value;
@@ -1825,25 +1626,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the governmentExp property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the governmentExp property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGovernmentExp().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PassportObject.GovernmentExp }
-     * 
-     * 
      */
     public List<PassportObject.GovernmentExp> getGovernmentExp() {
         if (governmentExp == null) {
@@ -1854,25 +1653,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the nonGovernmentExp property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the nonGovernmentExp property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNonGovernmentExp().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PassportObject.NonGovernmentExp }
-     * 
-     * 
      */
     public List<PassportObject.NonGovernmentExp> getNonGovernmentExp() {
         if (nonGovernmentExp == null) {
@@ -1883,25 +1680,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the ecologicalExp property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ecologicalExp property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEcologicalExp().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PassportObject.EcologicalExp }
-     * 
-     * 
      */
     public List<PassportObject.EcologicalExp> getEcologicalExp() {
         if (ecologicalExp == null) {
@@ -1912,11 +1707,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the projectPresentRem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProjectPresentRem() {
         return projectPresentRem;
@@ -1924,11 +1717,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the projectPresentRem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProjectPresentRem(String value) {
         this.projectPresentRem = value;
@@ -1936,11 +1727,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the projectPresentFl property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isProjectPresentFl() {
         return projectPresentFl;
@@ -1948,11 +1737,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the projectPresentFl property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setProjectPresentFl(Boolean value) {
         this.projectPresentFl = value;
@@ -1960,11 +1747,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the apo property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAPO() {
         return apo;
@@ -1972,11 +1757,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the apo property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAPO(String value) {
         this.apo = value;
@@ -1984,11 +1767,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the ops property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOPS() {
         return ops;
@@ -1996,11 +1777,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the ops property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOPS(String value) {
         this.ops = value;
@@ -2008,11 +1787,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the sen property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSEN() {
         return sen;
@@ -2020,11 +1797,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the sen property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSEN(String value) {
         this.sen = value;
@@ -2032,11 +1807,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the ogpn property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOGPN() {
         return ogpn;
@@ -2044,11 +1817,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the ogpn property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOGPN(String value) {
         this.ogpn = value;
@@ -2056,11 +1827,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the axAct property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAxAct() {
         return axAct;
@@ -2068,11 +1837,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the axAct property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAxAct(String value) {
         this.axAct = value;
@@ -2080,11 +1847,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the axActRem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getAxActRem() {
         return axActRem;
@@ -2092,11 +1857,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the axActRem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setAxActRem(String value) {
         this.axActRem = value;
@@ -2104,11 +1867,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objHandOver property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjHandOver() {
         return objHandOver;
@@ -2116,11 +1877,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objHandOver property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjHandOver(String value) {
         this.objHandOver = value;
@@ -2128,11 +1887,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objHandOverDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getObjHandOverDate() {
         return objHandOverDate;
@@ -2140,11 +1897,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objHandOverDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setObjHandOverDate(XMLGregorianCalendar value) {
         this.objHandOverDate = value;
@@ -2152,11 +1907,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objPostAddress property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjPostAddress() {
         return objPostAddress;
@@ -2164,11 +1917,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objPostAddress property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjPostAddress(String value) {
         this.objPostAddress = value;
@@ -2176,11 +1927,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objAdrStrGK property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjAdrStrGK() {
         return objAdrStrGK;
@@ -2188,11 +1937,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objAdrStrGK property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjAdrStrGK(String value) {
         this.objAdrStrGK = value;
@@ -2200,11 +1947,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objAdrStrGKYur property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjAdrStrGKYur() {
         return objAdrStrGKYur;
@@ -2212,11 +1957,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objAdrStrGKYur property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjAdrStrGKYur(String value) {
         this.objAdrStrGKYur = value;
@@ -2224,11 +1967,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objAdrHouseGK property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjAdrHouseGK() {
         return objAdrHouseGK;
@@ -2236,11 +1977,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objAdrHouseGK property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjAdrHouseGK(String value) {
         this.objAdrHouseGK = value;
@@ -2248,11 +1987,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objAdrKorpGK property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjAdrKorpGK() {
         return objAdrKorpGK;
@@ -2260,11 +1997,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objAdrKorpGK property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjAdrKorpGK(String value) {
         this.objAdrKorpGK = value;
@@ -2272,11 +2007,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the factPowerValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFactPowerValue() {
         return factPowerValue;
@@ -2284,11 +2017,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the factPowerValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFactPowerValue(String value) {
         this.factPowerValue = value;
@@ -2296,11 +2027,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objCritRem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjCritRem() {
         return objCritRem;
@@ -2308,11 +2037,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objCritRem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjCritRem(String value) {
         this.objCritRem = value;
@@ -2320,11 +2047,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the fio property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFIO() {
         return fio;
@@ -2332,11 +2057,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the fio property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFIO(String value) {
         this.fio = value;
@@ -2344,11 +2067,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the department property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDepartment() {
         return department;
@@ -2356,11 +2077,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the department property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDepartment(String value) {
         this.department = value;
@@ -2368,11 +2087,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objCritRemove property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjCritRemove() {
         return objCritRemove;
@@ -2380,11 +2097,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objCritRemove property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjCritRemove(String value) {
         this.objCritRemove = value;
@@ -2392,11 +2107,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objCritRemoveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getObjCritRemoveDate() {
         return objCritRemoveDate;
@@ -2404,11 +2117,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objCritRemoveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setObjCritRemoveDate(XMLGregorianCalendar value) {
         this.objCritRemoveDate = value;
@@ -2416,11 +2127,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the objCritRemoveRem property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getObjCritRemoveRem() {
         return objCritRemoveRem;
@@ -2428,11 +2137,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the objCritRemoveRem property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setObjCritRemoveRem(String value) {
         this.objCritRemoveRem = value;
@@ -2440,25 +2147,23 @@ public class PassportObject {
 
     /**
      * Gets the value of the commission property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the commission property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCommission().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PassportObject.Commission }
-     * 
-     * 
      */
     public List<PassportObject.Commission> getCommission() {
         if (commission == null) {
@@ -2469,11 +2174,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the rcNum property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRCNum() {
         return rcNum;
@@ -2481,11 +2184,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the rcNum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRCNum(String value) {
         this.rcNum = value;
@@ -2493,11 +2194,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the rcDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getRCDate() {
         return rcDate;
@@ -2505,11 +2204,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the rcDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setRCDate(XMLGregorianCalendar value) {
         this.rcDate = value;
@@ -2517,11 +2214,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the rcActNum property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getRCActNum() {
         return rcActNum;
@@ -2529,11 +2224,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the rcActNum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setRCActNum(String value) {
         this.rcActNum = value;
@@ -2541,11 +2234,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the rcActDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getRCActDate() {
         return rcActDate;
@@ -2553,11 +2244,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the rcActDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setRCActDate(XMLGregorianCalendar value) {
         this.rcActDate = value;
@@ -2565,11 +2254,9 @@ public class PassportObject {
 
     /**
      * Gets the value of the projCharact property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProjCharact() {
         return projCharact;
@@ -2577,11 +2264,9 @@ public class PassportObject {
 
     /**
      * Sets the value of the projCharact property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProjCharact(String value) {
         this.projCharact = value;
@@ -2590,9 +2275,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2613,21 +2298,19 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "komType",
-        "dateRealizationCommission",
-        "komNum",
-        "letterheadNum",
-        "outDate",
-        "dateRegistration",
-        "docNum",
-        "docDate",
-        "resNum",
-        "resDate"
+            "komType",
+            "dateRealizationCommission",
+            "komNum",
+            "letterheadNum",
+            "outDate",
+            "dateRegistration",
+            "docNum",
+            "docDate",
+            "resNum",
+            "resDate"
     })
     public static class Commission {
 
@@ -2659,11 +2342,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the komType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getKomType() {
             return komType;
@@ -2671,11 +2352,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the komType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setKomType(String value) {
             this.komType = value;
@@ -2683,11 +2362,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dateRealizationCommission property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getDateRealizationCommission() {
             return dateRealizationCommission;
@@ -2695,11 +2372,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dateRealizationCommission property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setDateRealizationCommission(XMLGregorianCalendar value) {
             this.dateRealizationCommission = value;
@@ -2707,11 +2382,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the komNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getKomNum() {
             return komNum;
@@ -2719,11 +2392,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the komNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setKomNum(String value) {
             this.komNum = value;
@@ -2731,11 +2402,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the letterheadNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLetterheadNum() {
             return letterheadNum;
@@ -2743,11 +2412,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the letterheadNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLetterheadNum(String value) {
             this.letterheadNum = value;
@@ -2755,11 +2422,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the outDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getOutDate() {
             return outDate;
@@ -2767,11 +2432,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the outDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setOutDate(XMLGregorianCalendar value) {
             this.outDate = value;
@@ -2779,11 +2442,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dateRegistration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getDateRegistration() {
             return dateRegistration;
@@ -2791,11 +2452,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dateRegistration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setDateRegistration(XMLGregorianCalendar value) {
             this.dateRegistration = value;
@@ -2803,11 +2462,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the docNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDocNum() {
             return docNum;
@@ -2815,11 +2472,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the docNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDocNum(String value) {
             this.docNum = value;
@@ -2827,11 +2482,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the docDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getDocDate() {
             return docDate;
@@ -2839,11 +2492,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the docDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setDocDate(XMLGregorianCalendar value) {
             this.docDate = value;
@@ -2851,11 +2502,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the resNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getResNum() {
             return resNum;
@@ -2863,11 +2512,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the resNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setResNum(String value) {
             this.resNum = value;
@@ -2875,11 +2522,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the resDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getResDate() {
             return resDate;
@@ -2887,11 +2532,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the resDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setResDate(XMLGregorianCalendar value) {
             this.resDate = value;
@@ -2902,9 +2545,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2918,14 +2561,12 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "expNum",
-        "expDate",
-        "expInfo"
+            "expNum",
+            "expDate",
+            "expInfo"
     })
     public static class EcologicalExp {
 
@@ -2939,11 +2580,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpNum() {
             return expNum;
@@ -2951,11 +2590,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpNum(String value) {
             this.expNum = value;
@@ -2963,11 +2600,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getExpDate() {
             return expDate;
@@ -2975,11 +2610,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setExpDate(XMLGregorianCalendar value) {
             this.expDate = value;
@@ -2987,11 +2620,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expInfo property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpInfo() {
             return expInfo;
@@ -2999,11 +2630,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expInfo property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpInfo(String value) {
             this.expInfo = value;
@@ -3014,9 +2643,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3031,15 +2660,13 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "fnoCode",
-        "fnoName",
-        "fnoSubgroupCode",
-        "fnoGroupCode"
+            "fnoCode",
+            "fnoName",
+            "fnoSubgroupCode",
+            "fnoGroupCode"
     })
     public static class FNO {
 
@@ -3054,11 +2681,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the fnoCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getFNOCode() {
             return fnoCode;
@@ -3066,11 +2691,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the fnoCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setFNOCode(String value) {
             this.fnoCode = value;
@@ -3078,11 +2701,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the fnoName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getFNOName() {
             return fnoName;
@@ -3090,11 +2711,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the fnoName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setFNOName(String value) {
             this.fnoName = value;
@@ -3102,11 +2721,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the fnoSubgroupCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getFNOSubgroupCode() {
             return fnoSubgroupCode;
@@ -3114,11 +2731,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the fnoSubgroupCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setFNOSubgroupCode(String value) {
             this.fnoSubgroupCode = value;
@@ -3126,11 +2741,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the fnoGroupCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getFNOGroupCode() {
             return fnoGroupCode;
@@ -3138,11 +2751,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the fnoGroupCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setFNOGroupCode(String value) {
             this.fnoGroupCode = value;
@@ -3153,9 +2764,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3169,14 +2780,12 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "expNum",
-        "expDate",
-        "expInfo"
+            "expNum",
+            "expDate",
+            "expInfo"
     })
     public static class GovernmentExp {
 
@@ -3190,11 +2799,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpNum() {
             return expNum;
@@ -3202,11 +2809,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpNum(String value) {
             this.expNum = value;
@@ -3214,11 +2819,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getExpDate() {
             return expDate;
@@ -3226,11 +2829,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setExpDate(XMLGregorianCalendar value) {
             this.expDate = value;
@@ -3238,11 +2839,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expInfo property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpInfo() {
             return expInfo;
@@ -3250,11 +2849,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expInfo property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpInfo(String value) {
             this.expInfo = value;
@@ -3265,9 +2862,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3282,15 +2879,13 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "expNum",
-        "expDate",
-        "expOrg",
-        "expAccredNum"
+            "expNum",
+            "expDate",
+            "expOrg",
+            "expAccredNum"
     })
     public static class NonGovernmentExp {
 
@@ -3306,11 +2901,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpNum() {
             return expNum;
@@ -3318,11 +2911,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpNum(String value) {
             this.expNum = value;
@@ -3330,11 +2921,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getExpDate() {
             return expDate;
@@ -3342,11 +2931,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setExpDate(XMLGregorianCalendar value) {
             this.expDate = value;
@@ -3354,11 +2941,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expOrg property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpOrg() {
             return expOrg;
@@ -3366,11 +2951,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expOrg property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpOrg(String value) {
             this.expOrg = value;
@@ -3378,11 +2961,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the expAccredNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getExpAccredNum() {
             return expAccredNum;
@@ -3390,11 +2971,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the expAccredNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setExpAccredNum(String value) {
             this.expAccredNum = value;
@@ -3405,9 +2984,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3444,26 +3023,24 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "objAddress",
-        "dcStreet",
-        "dcStreetLaw",
-        "dcRegionMassBuild",
-        "dcMicroDistrict",
-        "dcBlok",
-        "dcHouse",
-        "dcHouseNum",
-        "dcFlat",
-        "dcFlatNum",
-        "dcAddrLandmark",
-        "dcAddressComment",
-        "allDistPrefect",
-        "dcDistPrefect",
-        "dcSelectViewAdr"
+            "objAddress",
+            "dcStreet",
+            "dcStreetLaw",
+            "dcRegionMassBuild",
+            "dcMicroDistrict",
+            "dcBlok",
+            "dcHouse",
+            "dcHouseNum",
+            "dcFlat",
+            "dcFlatNum",
+            "dcAddrLandmark",
+            "dcAddressComment",
+            "allDistPrefect",
+            "dcDistPrefect",
+            "dcSelectViewAdr"
     })
     public static class ObjAddress {
 
@@ -3500,11 +3077,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the objAddress property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getObjAddress() {
             return objAddress;
@@ -3512,11 +3087,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the objAddress property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setObjAddress(String value) {
             this.objAddress = value;
@@ -3524,11 +3097,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcStreet property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCStreet() {
             return dcStreet;
@@ -3536,11 +3107,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcStreet property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCStreet(String value) {
             this.dcStreet = value;
@@ -3548,11 +3117,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcStreetLaw property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCStreetLaw() {
             return dcStreetLaw;
@@ -3560,11 +3127,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcStreetLaw property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCStreetLaw(String value) {
             this.dcStreetLaw = value;
@@ -3572,11 +3137,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcRegionMassBuild property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCRegionMassBuild() {
             return dcRegionMassBuild;
@@ -3584,11 +3147,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcRegionMassBuild property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCRegionMassBuild(String value) {
             this.dcRegionMassBuild = value;
@@ -3596,11 +3157,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcMicroDistrict property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCMicroDistrict() {
             return dcMicroDistrict;
@@ -3608,11 +3167,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcMicroDistrict property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCMicroDistrict(String value) {
             this.dcMicroDistrict = value;
@@ -3620,11 +3177,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcBlok property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCBlok() {
             return dcBlok;
@@ -3632,11 +3187,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcBlok property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCBlok(String value) {
             this.dcBlok = value;
@@ -3644,11 +3197,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcHouse property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCHouse() {
             return dcHouse;
@@ -3656,11 +3207,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcHouse property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCHouse(String value) {
             this.dcHouse = value;
@@ -3668,11 +3217,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcHouseNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCHouseNum() {
             return dcHouseNum;
@@ -3680,11 +3227,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcHouseNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCHouseNum(String value) {
             this.dcHouseNum = value;
@@ -3692,11 +3237,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcFlat property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCFlat() {
             return dcFlat;
@@ -3704,11 +3247,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcFlat property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCFlat(String value) {
             this.dcFlat = value;
@@ -3716,11 +3257,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcFlatNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCFlatNum() {
             return dcFlatNum;
@@ -3728,11 +3267,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcFlatNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCFlatNum(String value) {
             this.dcFlatNum = value;
@@ -3740,11 +3277,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcAddrLandmark property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCAddrLandmark() {
             return dcAddrLandmark;
@@ -3752,11 +3287,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcAddrLandmark property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCAddrLandmark(String value) {
             this.dcAddrLandmark = value;
@@ -3764,11 +3297,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcAddressComment property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCAddressComment() {
             return dcAddressComment;
@@ -3776,11 +3307,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcAddressComment property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCAddressComment(String value) {
             this.dcAddressComment = value;
@@ -3788,11 +3317,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the allDistPrefect property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getAllDistPrefect() {
             return allDistPrefect;
@@ -3800,11 +3327,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the allDistPrefect property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setAllDistPrefect(String value) {
             this.allDistPrefect = value;
@@ -3812,25 +3337,23 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcDistPrefect property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the dcDistPrefect property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDCDistPrefect().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PassportObject.ObjAddress.DCDistPrefect }
-         * 
-         * 
          */
         public List<PassportObject.ObjAddress.DCDistPrefect> getDCDistPrefect() {
             if (dcDistPrefect == null) {
@@ -3841,11 +3364,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the dcSelectViewAdr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getDCSelectViewAdr() {
             return dcSelectViewAdr;
@@ -3853,11 +3374,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the dcSelectViewAdr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setDCSelectViewAdr(String value) {
             this.dcSelectViewAdr = value;
@@ -3866,9 +3385,9 @@ public class PassportObject {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -3881,13 +3400,11 @@ public class PassportObject {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "dcPrefect",
-            "dcDist"
+                "dcPrefect",
+                "dcDist"
         })
         public static class DCDistPrefect {
 
@@ -3898,11 +3415,9 @@ public class PassportObject {
 
             /**
              * Gets the value of the dcPrefect property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getDCPrefect() {
                 return dcPrefect;
@@ -3910,11 +3425,9 @@ public class PassportObject {
 
             /**
              * Sets the value of the dcPrefect property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setDCPrefect(String value) {
                 this.dcPrefect = value;
@@ -3922,11 +3435,9 @@ public class PassportObject {
 
             /**
              * Gets the value of the dcDist property.
-             * 
-             * @return
-             *     possible object is
-             *     {@link String }
-             *     
+             *
+             * @return possible object is
+             * {@link String }
              */
             public String getDCDist() {
                 return dcDist;
@@ -3934,11 +3445,9 @@ public class PassportObject {
 
             /**
              * Sets the value of the dcDist property.
-             * 
-             * @param value
-             *     allowed object is
-             *     {@link String }
-             *     
+             *
+             * @param value allowed object is
+             *              {@link String }
              */
             public void setDCDist(String value) {
                 this.dcDist = value;
@@ -3951,9 +3460,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3968,15 +3477,13 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "objSMR",
-        "objOPO",
-        "objEO",
-        "objGPR"
+            "objSMR",
+            "objOPO",
+            "objEO",
+            "objGPR"
     })
     public static class ObjCat {
 
@@ -3991,11 +3498,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the objSMR property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getObjSMR() {
             return objSMR;
@@ -4003,11 +3508,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the objSMR property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setObjSMR(BigInteger value) {
             this.objSMR = value;
@@ -4015,11 +3518,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the objOPO property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getObjOPO() {
             return objOPO;
@@ -4027,11 +3528,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the objOPO property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setObjOPO(BigInteger value) {
             this.objOPO = value;
@@ -4039,11 +3538,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the objEO property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getObjEO() {
             return objEO;
@@ -4051,11 +3548,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the objEO property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setObjEO(BigInteger value) {
             this.objEO = value;
@@ -4063,11 +3558,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the objGPR property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @return possible object is
+         * {@link BigInteger }
          */
         public BigInteger getObjGPR() {
             return objGPR;
@@ -4075,11 +3568,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the objGPR property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link BigInteger }
          */
         public void setObjGPR(BigInteger value) {
             this.objGPR = value;
@@ -4090,9 +3581,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4105,13 +3596,11 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "opoRegNum",
-        "opoRegDate"
+            "opoRegNum",
+            "opoRegDate"
     })
     public static class OpoReg {
 
@@ -4123,11 +3612,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the opoRegNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOpoRegNum() {
             return opoRegNum;
@@ -4135,11 +3622,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the opoRegNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOpoRegNum(String value) {
             this.opoRegNum = value;
@@ -4147,11 +3632,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the opoRegDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @return possible object is
+         * {@link XMLGregorianCalendar }
          */
         public XMLGregorianCalendar getOpoRegDate() {
             return opoRegDate;
@@ -4159,11 +3642,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the opoRegDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link XMLGregorianCalendar }
          */
         public void setOpoRegDate(XMLGregorianCalendar value) {
             this.opoRegDate = value;
@@ -4174,9 +3655,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4200,24 +3681,22 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orgRole",
-        "orgID",
-        "orgName",
-        "orgOGRN",
-        "orgINN",
-        "licenseNum",
-        "orgDogovor",
-        "orgPredstID",
-        "orgPredst",
-        "orgPrikaz",
-        "orgPredstKontrID",
-        "orgPredstKontr",
-        "orgPrikazKontr"
+            "orgRole",
+            "orgID",
+            "orgName",
+            "orgOGRN",
+            "orgINN",
+            "licenseNum",
+            "orgDogovor",
+            "orgPredstID",
+            "orgPredst",
+            "orgPrikaz",
+            "orgPredstKontrID",
+            "orgPredstKontr",
+            "orgPrikazKontr"
     })
     public static class Organization {
 
@@ -4250,11 +3729,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgRole property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgRole() {
             return orgRole;
@@ -4262,11 +3739,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgRole property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgRole(String value) {
             this.orgRole = value;
@@ -4274,11 +3749,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgID() {
             return orgID;
@@ -4286,11 +3759,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgID(String value) {
             this.orgID = value;
@@ -4298,11 +3769,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgName() {
             return orgName;
@@ -4310,11 +3779,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgName(String value) {
             this.orgName = value;
@@ -4322,11 +3789,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgOGRN property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgOGRN() {
             return orgOGRN;
@@ -4334,11 +3799,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgOGRN property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgOGRN(String value) {
             this.orgOGRN = value;
@@ -4346,11 +3809,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgINN property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgINN() {
             return orgINN;
@@ -4358,11 +3819,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgINN property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgINN(String value) {
             this.orgINN = value;
@@ -4370,11 +3829,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the licenseNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLicenseNum() {
             return licenseNum;
@@ -4382,11 +3839,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the licenseNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLicenseNum(String value) {
             this.licenseNum = value;
@@ -4394,11 +3849,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgDogovor property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgDogovor() {
             return orgDogovor;
@@ -4406,11 +3859,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgDogovor property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgDogovor(String value) {
             this.orgDogovor = value;
@@ -4418,11 +3869,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstID() {
             return orgPredstID;
@@ -4430,11 +3879,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstID(String value) {
             this.orgPredstID = value;
@@ -4442,11 +3889,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredst property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredst() {
             return orgPredst;
@@ -4454,11 +3899,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredst property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredst(String value) {
             this.orgPredst = value;
@@ -4466,11 +3909,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikaz property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikaz() {
             return orgPrikaz;
@@ -4478,11 +3919,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikaz property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikaz(String value) {
             this.orgPrikaz = value;
@@ -4490,11 +3929,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontrID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontrID() {
             return orgPredstKontrID;
@@ -4502,11 +3939,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontrID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontrID(String value) {
             this.orgPredstKontrID = value;
@@ -4514,11 +3949,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontr() {
             return orgPredstKontr;
@@ -4526,11 +3959,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontr(String value) {
             this.orgPredstKontr = value;
@@ -4538,11 +3969,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikazKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikazKontr() {
             return orgPrikazKontr;
@@ -4550,11 +3979,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikazKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikazKontr(String value) {
             this.orgPrikazKontr = value;
@@ -4565,9 +3992,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4589,22 +4016,20 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orgRole",
-        "orgID",
-        "orgName",
-        "licenseNum",
-        "orgDogovor",
-        "orgPredstID",
-        "orgPredst",
-        "orgPrikaz",
-        "orgPredstKontrID",
-        "orgPredstKontr",
-        "orgPrikazKontr"
+            "orgRole",
+            "orgID",
+            "orgName",
+            "licenseNum",
+            "orgDogovor",
+            "orgPredstID",
+            "orgPredst",
+            "orgPrikaz",
+            "orgPredstKontrID",
+            "orgPredstKontr",
+            "orgPrikazKontr"
     })
     public static class OrganizationAuthor {
 
@@ -4633,11 +4058,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgRole property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgRole() {
             return orgRole;
@@ -4645,11 +4068,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgRole property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgRole(String value) {
             this.orgRole = value;
@@ -4657,11 +4078,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgID() {
             return orgID;
@@ -4669,11 +4088,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgID(String value) {
             this.orgID = value;
@@ -4681,11 +4098,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgName() {
             return orgName;
@@ -4693,11 +4108,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgName(String value) {
             this.orgName = value;
@@ -4705,11 +4118,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the licenseNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLicenseNum() {
             return licenseNum;
@@ -4717,11 +4128,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the licenseNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLicenseNum(String value) {
             this.licenseNum = value;
@@ -4729,11 +4138,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgDogovor property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgDogovor() {
             return orgDogovor;
@@ -4741,11 +4148,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgDogovor property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgDogovor(String value) {
             this.orgDogovor = value;
@@ -4753,11 +4158,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstID() {
             return orgPredstID;
@@ -4765,11 +4168,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstID(String value) {
             this.orgPredstID = value;
@@ -4777,11 +4178,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredst property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredst() {
             return orgPredst;
@@ -4789,11 +4188,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredst property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredst(String value) {
             this.orgPredst = value;
@@ -4801,11 +4198,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikaz property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikaz() {
             return orgPrikaz;
@@ -4813,11 +4208,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikaz property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikaz(String value) {
             this.orgPrikaz = value;
@@ -4825,11 +4218,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontrID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontrID() {
             return orgPredstKontrID;
@@ -4837,11 +4228,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontrID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontrID(String value) {
             this.orgPredstKontrID = value;
@@ -4849,11 +4238,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontr() {
             return orgPredstKontr;
@@ -4861,11 +4248,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontr(String value) {
             this.orgPredstKontr = value;
@@ -4873,11 +4258,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikazKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikazKontr() {
             return orgPrikazKontr;
@@ -4885,11 +4268,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikazKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikazKontr(String value) {
             this.orgPrikazKontr = value;
@@ -4900,9 +4281,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4916,14 +4297,12 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orgRole",
-        "orgID",
-        "orgName"
+            "orgRole",
+            "orgID",
+            "orgName"
     })
     public static class OrganizationBuilder {
 
@@ -4936,11 +4315,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgRole property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgRole() {
             return orgRole;
@@ -4948,11 +4325,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgRole property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgRole(String value) {
             this.orgRole = value;
@@ -4960,11 +4335,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgID() {
             return orgID;
@@ -4972,11 +4345,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgID(String value) {
             this.orgID = value;
@@ -4984,11 +4355,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgName() {
             return orgName;
@@ -4996,11 +4365,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgName(String value) {
             this.orgName = value;
@@ -5011,9 +4378,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -5035,22 +4402,20 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orgRole",
-        "orgID",
-        "orgName",
-        "licenseNum",
-        "orgDogovor",
-        "orgPredstID",
-        "orgPredst",
-        "orgPrikaz",
-        "orgPredstKontrID",
-        "orgPredstKontr",
-        "orgPrikazKontr"
+            "orgRole",
+            "orgID",
+            "orgName",
+            "licenseNum",
+            "orgDogovor",
+            "orgPredstID",
+            "orgPredst",
+            "orgPrikaz",
+            "orgPredstKontrID",
+            "orgPredstKontr",
+            "orgPrikazKontr"
     })
     public static class OrganizationCustomer {
 
@@ -5079,11 +4444,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgRole property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgRole() {
             return orgRole;
@@ -5091,11 +4454,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgRole property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgRole(String value) {
             this.orgRole = value;
@@ -5103,11 +4464,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgID() {
             return orgID;
@@ -5115,11 +4474,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgID(String value) {
             this.orgID = value;
@@ -5127,11 +4484,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgName() {
             return orgName;
@@ -5139,11 +4494,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgName(String value) {
             this.orgName = value;
@@ -5151,11 +4504,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the licenseNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLicenseNum() {
             return licenseNum;
@@ -5163,11 +4514,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the licenseNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLicenseNum(String value) {
             this.licenseNum = value;
@@ -5175,11 +4524,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgDogovor property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgDogovor() {
             return orgDogovor;
@@ -5187,11 +4534,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgDogovor property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgDogovor(String value) {
             this.orgDogovor = value;
@@ -5199,11 +4544,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstID() {
             return orgPredstID;
@@ -5211,11 +4554,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstID(String value) {
             this.orgPredstID = value;
@@ -5223,11 +4564,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredst property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredst() {
             return orgPredst;
@@ -5235,11 +4574,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredst property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredst(String value) {
             this.orgPredst = value;
@@ -5247,11 +4584,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikaz property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikaz() {
             return orgPrikaz;
@@ -5259,11 +4594,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikaz property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikaz(String value) {
             this.orgPrikaz = value;
@@ -5271,11 +4604,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontrID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontrID() {
             return orgPredstKontrID;
@@ -5283,11 +4614,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontrID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontrID(String value) {
             this.orgPredstKontrID = value;
@@ -5295,11 +4624,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontr() {
             return orgPredstKontr;
@@ -5307,11 +4634,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontr(String value) {
             this.orgPredstKontr = value;
@@ -5319,11 +4644,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikazKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikazKontr() {
             return orgPrikazKontr;
@@ -5331,11 +4654,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikazKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikazKontr(String value) {
             this.orgPrikazKontr = value;
@@ -5346,9 +4667,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -5370,22 +4691,20 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orgRole",
-        "orgID",
-        "orgName",
-        "licenseNum",
-        "orgDogovor",
-        "orgPredstID",
-        "orgPredst",
-        "orgPrikaz",
-        "orgPredstKontrID",
-        "orgPredstKontr",
-        "orgPrikazKontr"
+            "orgRole",
+            "orgID",
+            "orgName",
+            "licenseNum",
+            "orgDogovor",
+            "orgPredstID",
+            "orgPredst",
+            "orgPrikaz",
+            "orgPredstKontrID",
+            "orgPredstKontr",
+            "orgPrikazKontr"
     })
     public static class OrganizationGeneral {
 
@@ -5414,11 +4733,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgRole property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgRole() {
             return orgRole;
@@ -5426,11 +4743,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgRole property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgRole(String value) {
             this.orgRole = value;
@@ -5438,11 +4753,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgID() {
             return orgID;
@@ -5450,11 +4763,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgID(String value) {
             this.orgID = value;
@@ -5462,11 +4773,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgName() {
             return orgName;
@@ -5474,11 +4783,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgName(String value) {
             this.orgName = value;
@@ -5486,11 +4793,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the licenseNum property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getLicenseNum() {
             return licenseNum;
@@ -5498,11 +4803,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the licenseNum property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setLicenseNum(String value) {
             this.licenseNum = value;
@@ -5510,11 +4813,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgDogovor property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgDogovor() {
             return orgDogovor;
@@ -5522,11 +4823,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgDogovor property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgDogovor(String value) {
             this.orgDogovor = value;
@@ -5534,11 +4833,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstID() {
             return orgPredstID;
@@ -5546,11 +4843,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstID(String value) {
             this.orgPredstID = value;
@@ -5558,11 +4853,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredst property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredst() {
             return orgPredst;
@@ -5570,11 +4863,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredst property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredst(String value) {
             this.orgPredst = value;
@@ -5582,11 +4873,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikaz property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikaz() {
             return orgPrikaz;
@@ -5594,11 +4883,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikaz property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikaz(String value) {
             this.orgPrikaz = value;
@@ -5606,11 +4893,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontrID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontrID() {
             return orgPredstKontrID;
@@ -5618,11 +4903,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontrID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontrID(String value) {
             this.orgPredstKontrID = value;
@@ -5630,11 +4913,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPredstKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPredstKontr() {
             return orgPredstKontr;
@@ -5642,11 +4923,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPredstKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPredstKontr(String value) {
             this.orgPredstKontr = value;
@@ -5654,11 +4933,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgPrikazKontr property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgPrikazKontr() {
             return orgPrikazKontr;
@@ -5666,11 +4943,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgPrikazKontr property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgPrikazKontr(String value) {
             this.orgPrikazKontr = value;
@@ -5681,9 +4956,9 @@ public class PassportObject {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     *
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -5697,14 +4972,12 @@ public class PassportObject {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "orgRole",
-        "orgID",
-        "orgName"
+            "orgRole",
+            "orgID",
+            "orgName"
     })
     public static class OrganizationOperating {
 
@@ -5717,11 +4990,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgRole property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgRole() {
             return orgRole;
@@ -5729,11 +5000,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgRole property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgRole(String value) {
             this.orgRole = value;
@@ -5741,11 +5010,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgID property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgID() {
             return orgID;
@@ -5753,11 +5020,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgID property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgID(String value) {
             this.orgID = value;
@@ -5765,11 +5030,9 @@ public class PassportObject {
 
         /**
          * Gets the value of the orgName property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getOrgName() {
             return orgName;
@@ -5777,11 +5040,9 @@ public class PassportObject {
 
         /**
          * Sets the value of the orgName property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setOrgName(String value) {
             this.orgName = value;

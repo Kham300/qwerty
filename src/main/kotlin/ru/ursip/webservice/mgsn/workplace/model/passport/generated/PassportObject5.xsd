@@ -1,972 +1,1018 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by bugaga (EMBRACE) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cmn="http://xmlns.oracle.com/MSG_COMMON" xmlns:cfm="http://xmlns.oracle.com/COMMON_FORM" xmlns="http://xmlns.oracle.com/MSG_PassportObject" targetNamespace="http://xmlns.oracle.com/MSG_PassportObject" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:import namespace="http://xmlns.oracle.com/COMMON_FORM" schemaLocation="http://common.stroy.mos.ru/hd_isio/xsd/common_form.xsd"/>
-	<xs:element name="DocData">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="DocContent" type="PassportObject"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:complexType name="PassportObject">
-		<xs:annotation>
-			<xs:documentation>Корневой тег документа Паспорт объекта</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="isArchive" type="xs:boolean" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Признак "Документ перемещен в архив".</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			
-			<xs:element name="ObjID" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>идентификатор объекта </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DeloNum" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Номер дела</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DBType" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Тип БД (ВУО, ТИК...). Словарь OBJ_DB_TYPES</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="InArchiveReason" type="xs:string" minOccurs="0"/>
-			<xs:element name="InArchiveReasonAdd" type="xs:string" minOccurs="0"/>
-			<xs:element name="InArchiveDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Дата перевода в архив</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SpecMark" type="xs:string" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Особые пометки, словарь OBJ_SPEC_MARKS</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ConstrState" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Состояние строительства</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MapHTMLLong" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Для карты</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MapObjID" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Для карты</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MapRegParams" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Для карты</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjAddress" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Адрес объекта</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="ObjAddress" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Адрес объекта строкой</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_Street" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Улица</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_Street_Law" type="xs:string" minOccurs="0"/>
-						<xs:element name="DC_RegionMassBuild" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Район застройки</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_MicroDistrict" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Микрорайон</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_Blok" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Квартал</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_House" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Владение дом</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_House_Num" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер владения, дома</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_Flat" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Корпус/Строение/Сооружение</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_Flat_Num" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер Корпус/Строение/Сооружение</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_AddrLandmark" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Адрессный ориентир</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_AddressComment" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Примечание</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="All_Dist_Prefect" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Округи и районы объекта</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DC_Dist_Prefect" minOccurs="0" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>Округ/Район</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="DC_Prefect" type="xs:string" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>Округ (ALL_PREFECT)</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="DC_Dist" type="xs:string" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>Район (ALL_DISTRICT)</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="DCSelectViewAdr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Тип адресации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="BuildStartDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Дата начала строительства</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="BuildEndDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Дата окончания строительства</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ConstractPOSDate" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Срок по ПОС</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NumberOrder" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Номер заказа (ТИК)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjName" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Наименование объекта</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjTotalArea" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Общая площадь</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjLength" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Протяженность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjFloor" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Этажность - раньше ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ResponsibilityLevel" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Уровень ответственности. Словарь RESPONSIBILITY_LEVEL</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Objkod" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Функциональное назначение</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjCategoriesBuild" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Вид строительства - словарь OBJ_BUILD_TYPES</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StageBuilding" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Этап строительства - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="NFOCode" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Функциональное назначение - код
-					Словарь: OBJ_FNO</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FNO" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Функциональное назначение по классификатору (словарь FNO_STROY)</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="FNOCode" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Код ФНО, словарь FNO_STROY</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="FNOName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Наименование ФНО</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="FNOSubgroupCode" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Подгруппа ФНО</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="FNOGroupCode" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Группа ФНО</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="ParentName" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Функциональное назначение объекта (родительское)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TypeBuild" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Тип функционального назначения. Выбирается из словаря OBJ_FNO_TYPES</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjProjektSeries" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Серия проекта</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<!-- ПОКАЗАТЕЛИ - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ-->
-			<xs:element name="PowerName" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Мощность - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PowerValue" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Значение - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MetricUnitsName" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Ед. измерения - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<!-- ДАЛЬШЕ - НУЖНЫЕ ПОЛЯ-->
-			<xs:element name="ObjFinSourse" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Источник финансирования. Словарь: OBJ_FINANCE</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Front_System" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Фасадная система</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjInspector" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Специалист УН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjInspectorDep" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Подразделение специалиста УН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjInspectorPosition" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Должность специалиста УН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjInspectorOrder" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Распоряжение</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjInspectorHistory" type="xs:string" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>История изменения инспектора в формате ФИО - УН - Распоряжение</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjComment" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Примечание</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Organization" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Организации</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OrgRole" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Роль организации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ID организации в БД "Список орг."</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Полное наименование</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgOGRN" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ОГРН</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgINN" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ИНН</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="LicenseNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Лицензия</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на авторский надзор - для Авторского надзора)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель - ID</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredst" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для авторского надзора, производитель работ - для ген. подрядчика</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или производителя работ (для ген.подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="OrganizationBuilder" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Застройщик</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OrgRole" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Роль организации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ID организации в БД "Список орг."</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Полное наименование</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="OrganizationGeneral" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Организация Генеральный подрядчик</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OrgRole" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Роль организации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ID организации в БД "Список орг."</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Полное наименование</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="LicenseNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Лицензия</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на авторский надзор - для Авторского надзора)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель - ID</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredst" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для авторского надзора, производитель работ - для ген. подрядчика</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или производителя работ (для ген.подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="OrganizationCustomer" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Организация Технический заказчик</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OrgRole" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Роль организации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ID организации в БД "Список орг."</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Полное наименование</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="LicenseNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Лицензия</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на авторский надзор - для Авторского надзора)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель - ID</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredst" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для авторского надзора, производитель работ - для ген. подрядчика</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или производителя работ (для ген.подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="OrganizationAuthor" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Организация Авторский надзор</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OrgRole" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Роль организации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ID организации в БД "Список орг."</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Полное наименование</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="LicenseNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Лицензия</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на авторский надзор - для Авторского надзора)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель - ID</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredst" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для авторского надзора, производитель работ - для ген. подрядчика</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или производителя работ (для ген.подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген. подрядчика)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="OrganizationOperating" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Организация Эксплуатирующая</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OrgRole" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Роль организации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgID" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>ID организации в БД "Список орг."</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OrgName" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Полное наименование</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<!-- Поля ниже ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ -->
-			<xs:element name="ObjCat" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Категория объекта метро</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="ObjSMR" type="xs:integer" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Объекты СМР (признак)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ObjOPO" type="xs:integer" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Опасные промышленные объекты (признак)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ObjEO" type="xs:integer" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Объекты энергетики (признак)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ObjGPR" type="xs:integer" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Объекты ГПР (признак)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="OpoReg" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Свидетельство о регистрации ОПО</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="OpoRegNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Свидетельство о регистрации ОПО, номер</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OpoRegDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Свидетельство о регистрации ОПО, дата</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="IsNoReestr" type="xs:integer" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Организация не зарегистрирована в реестре (признак)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="GovernmentExp" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Заключение экспертизы органа государственного надзора</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="ExpNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpInfo" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Информация о регистрации заключения в МГЭ</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="NonGovernmentExp" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Заключение экспертизы органа негосударственного надзора</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="ExpNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpOrg" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Организация</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpAccredNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер свидетельства об аккредитации</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="EcologicalExp" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Заключение государственной экологической экспертизы</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="ExpNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ExpInfo" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Доп. информация</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="ProjectPresentRem" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Проект представлен</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjectPresentFl" type="xs:boolean" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Флаг Проект представлен</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="APO" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Согласование стройгенплана: АПО</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OPS" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Согласование стройгенплана: ОПС</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SEN" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Согласование стройгенплана: СЭН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="OGPN" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Согласование стройгенплана: ОГПН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AxAct" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Акт Мосгортреста о разбивке сетей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AxActRem" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Примечание</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjHandOver" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Сдача объекта</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjHandOverDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Срок сдачи объекта</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjPostAddress" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Почтовый адрес строкой</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjAdrStrGK" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Улица</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjAdrStrGKYur" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Улица_ Юридич</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjAdrHouseGK" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Дом</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjAdrKorpGK" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Корпус</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FactPowerValue" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Фическая мощность - закладка "Сдача объекта"</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjCritRem" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Замечания</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="FIO" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Специалист УН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Department" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Подразделение специалиста УН</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjCritRemove" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Флаг Замечания устранены</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjCritRemoveDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Дата  замечания устранены</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ObjCritRemoveRem" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Замечания устранены (Примечание)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Commission" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Приемочная ккомиссия</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="KomType" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Тип комиссии (ГК/ПК)</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DateRealizationCommission" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата проведения коммисии</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="KomNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>№ Акта</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="Letterhead_Num" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>№ бланка</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="OutDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата регистрации акта</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="Date_Registration" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата выдачи</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DocNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Документ об утверждении акта ПК, №</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="DocDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Документ об утверждении акта ПК, дата</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ResNum" type="xs:string" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Номер Итогового заключения</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="ResDate" type="xs:date" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Дата итогового заключения </xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="RCNum" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Номер Итогового заключения</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="RCDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Дата итогового заключения </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="RCActNum" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Прововой акта на эксплуатацию, номер</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="RCActDate" type="xs:date" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Прововой акта на эксплуатацию, дата</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ProjCharact" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>основные проектные характеристики объекта</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="http://xmlns.oracle.com/MSG_PassportObject"
+		   targetNamespace="http://xmlns.oracle.com/MSG_PassportObject" elementFormDefault="qualified"
+		   attributeFormDefault="unqualified">
+    <xs:import namespace="http://xmlns.oracle.com/COMMON_FORM"
+               schemaLocation="http://common.stroy.mos.ru/hd_isio/xsd/common_form.xsd"/>
+    <xs:element name="DocData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DocContent" type="PassportObject"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PassportObject">
+        <xs:annotation>
+            <xs:documentation>Корневой тег документа Паспорт объекта</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="isArchive" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Признак "Документ перемещен в архив".</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="ObjID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>идентификатор объекта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DeloNum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер дела</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DBType" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Тип БД (ВУО, ТИК...). Словарь OBJ_DB_TYPES</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="InArchiveReason" type="xs:string" minOccurs="0"/>
+            <xs:element name="InArchiveReasonAdd" type="xs:string" minOccurs="0"/>
+            <xs:element name="InArchiveDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата перевода в архив</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SpecMark" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Особые пометки, словарь OBJ_SPEC_MARKS</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ConstrState" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Состояние строительства</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MapHTMLLong" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Для карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MapObjID" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Для карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MapRegParams" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Для карты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjAddress" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Адрес объекта</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ObjAddress" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Адрес объекта строкой</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_Street" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Улица</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_Street_Law" type="xs:string" minOccurs="0"/>
+                        <xs:element name="DC_RegionMassBuild" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Район застройки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_MicroDistrict" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Микрорайон</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_Blok" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Квартал</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_House" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Владение дом</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_House_Num" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер владения, дома</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_Flat" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Корпус/Строение/Сооружение</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_Flat_Num" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер Корпус/Строение/Сооружение</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_AddrLandmark" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Адрессный ориентир</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_AddressComment" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Примечание</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="All_Dist_Prefect" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Округи и районы объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DC_Dist_Prefect" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Округ/Район</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="DC_Prefect" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Округ (ALL_PREFECT)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="DC_Dist" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Район (ALL_DISTRICT)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="DCSelectViewAdr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип адресации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="BuildStartDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата начала строительства</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="BuildEndDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата окончания строительства</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ConstractPOSDate" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Срок по ПОС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="NumberOrder" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер заказа (ТИК)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Наименование объекта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjTotalArea" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Общая площадь</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjLength" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Протяженность</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjFloor" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Этажность - раньше ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ResponsibilityLevel" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уровень ответственности. Словарь RESPONSIBILITY_LEVEL</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Objkod" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Функциональное назначение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjCategoriesBuild" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Вид строительства - словарь OBJ_BUILD_TYPES</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="StageBuilding" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Этап строительства - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="NFOCode" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Функциональное назначение - код
+                        Словарь: OBJ_FNO
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="FNO" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Функциональное назначение по классификатору (словарь FNO_STROY)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="FNOCode" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Код ФНО, словарь FNO_STROY</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="FNOName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование ФНО</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="FNOSubgroupCode" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Подгруппа ФНО</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="FNOGroupCode" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Группа ФНО</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ParentName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Функциональное назначение объекта (родительское)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="TypeBuild" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Тип функционального назначения. Выбирается из словаря OBJ_FNO_TYPES
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjProjektSeries" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Серия проекта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!-- ПОКАЗАТЕЛИ - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ-->
+            <xs:element name="PowerName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Мощность - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="PowerValue" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Значение - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MetricUnitsName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ед. измерения - ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!-- ДАЛЬШЕ - НУЖНЫЕ ПОЛЯ-->
+            <xs:element name="ObjFinSourse" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Источник финансирования. Словарь: OBJ_FINANCE</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Front_System" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фасадная система</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjInspector" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Специалист УН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjInspectorDep" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Подразделение специалиста УН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjInspectorPosition" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Должность специалиста УН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjInspectorOrder" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Распоряжение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjInspectorHistory" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>История изменения инспектора в формате ФИО - УН - Распоряжение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Примечание</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Organization" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Организации</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ID организации в БД "Список орг."</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Полное наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgOGRN" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ОГРН</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgINN" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ИНН</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="LicenseNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лицензия</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на
+                                    авторский надзор - для Авторского надзора)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель - ID</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredst" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для
+                                    авторского надзора, производитель работ - для ген. подрядчика
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или
+                                    производителя работ (для ген.подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген.
+                                    подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OrganizationBuilder" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Застройщик</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ID организации в БД "Список орг."</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Полное наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OrganizationGeneral" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Организация Генеральный подрядчик</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ID организации в БД "Список орг."</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Полное наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="LicenseNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лицензия</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на
+                                    авторский надзор - для Авторского надзора)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель - ID</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredst" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для
+                                    авторского надзора, производитель работ - для ген. подрядчика
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или
+                                    производителя работ (для ген.подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген.
+                                    подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OrganizationCustomer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Организация Технический заказчик</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ID организации в БД "Список орг."</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Полное наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="LicenseNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лицензия</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на
+                                    авторский надзор - для Авторского надзора)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель - ID</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredst" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для
+                                    авторского надзора, производитель работ - для ген. подрядчика
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или
+                                    производителя работ (для ген.подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген.
+                                    подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OrganizationAuthor" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Организация Авторский надзор</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ID организации в БД "Список орг."</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Полное наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="LicenseNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лицензия</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgDogovor" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер договора (на ведение функций Заказчика-для заказчика, на
+                                    авторский надзор - для Авторского надзора)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель - ID</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredst" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель (заказчика - для заказчика, авторского надзора - для
+                                    авторского надзора, производитель работ - для ген. подрядчика
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikaz" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа представителя (заказчика или авторского надзора) или
+                                    производителя работ (для ген.подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontrID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPredstKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Представитель стройконтроля (для заказчика и ген. подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgPrikazKontr" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер приказа (предст. стройконтроля) (для заказчика и ген.
+                                    подрядчика)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OrganizationOperating" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Организация Эксплуатирующая</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgID" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ID организации в БД "Список орг."</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OrgName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Полное наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!-- Поля ниже ТОЛЬКО ДЛЯ СТАРЫХ ЛОТУСОВЫХ ПАСПОРТОВ -->
+            <xs:element name="ObjCat" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Категория объекта метро</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ObjSMR" type="xs:integer" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Объекты СМР (признак)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ObjOPO" type="xs:integer" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Опасные промышленные объекты (признак)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ObjEO" type="xs:integer" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Объекты энергетики (признак)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ObjGPR" type="xs:integer" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Объекты ГПР (признак)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OpoReg" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Свидетельство о регистрации ОПО</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OpoRegNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Свидетельство о регистрации ОПО, номер</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OpoRegDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Свидетельство о регистрации ОПО, дата</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="IsNoReestr" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Организация не зарегистрирована в реестре (признак)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="GovernmentExp" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Заключение экспертизы органа государственного надзора</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ExpNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpInfo" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Информация о регистрации заключения в МГЭ</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NonGovernmentExp" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Заключение экспертизы органа негосударственного надзора</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ExpNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpOrg" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Организация</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpAccredNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер свидетельства об аккредитации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EcologicalExp" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Заключение государственной экологической экспертизы</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ExpNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ExpInfo" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Доп. информация</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ProjectPresentRem" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Проект представлен</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ProjectPresentFl" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Флаг Проект представлен</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="APO" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Согласование стройгенплана: АПО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="OPS" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Согласование стройгенплана: ОПС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SEN" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Согласование стройгенплана: СЭН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="OGPN" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Согласование стройгенплана: ОГПН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AxAct" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Акт Мосгортреста о разбивке сетей</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AxActRem" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Примечание</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjHandOver" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сдача объекта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjHandOverDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Срок сдачи объекта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjPostAddress" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Почтовый адрес строкой</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjAdrStrGK" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Улица</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjAdrStrGKYur" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Улица_ Юридич</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjAdrHouseGK" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjAdrKorpGK" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Корпус</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="FactPowerValue" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фическая мощность - закладка "Сдача объекта"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjCritRem" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Замечания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="FIO" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Специалист УН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Department" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Подразделение специалиста УН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjCritRemove" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Флаг Замечания устранены</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjCritRemoveDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата замечания устранены</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ObjCritRemoveRem" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Замечания устранены (Примечание)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Commission" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Приемочная ккомиссия</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="KomType" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип комиссии (ГК/ПК)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DateRealizationCommission" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата проведения коммисии</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="KomNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>№ Акта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Letterhead_Num" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>№ бланка</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="OutDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата регистрации акта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Date_Registration" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата выдачи</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DocNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Документ об утверждении акта ПК, №</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="DocDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Документ об утверждении акта ПК, дата</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ResNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер Итогового заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ResDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата итогового заключения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RCNum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер Итогового заключения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="RCDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата итогового заключения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="RCActNum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Прововой акта на эксплуатацию, номер</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="RCActDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Прововой акта на эксплуатацию, дата</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ProjCharact" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>основные проектные характеристики объекта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

@@ -1,18 +1,13 @@
-
 package ru.ursip.webservice.mgsn.workplace.model.passport.generated;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for anonymous complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -24,12 +19,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "docContent"
+        "docContent"
 })
 @XmlRootElement(name = "DocData", namespace = "http://xmlns.oracle.com/MSG_PassportObject")
 public class DocData {
@@ -39,11 +32,9 @@ public class DocData {
 
     /**
      * Gets the value of the docContent property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PassportObject }
-     *     
+     *
+     * @return possible object is
+     * {@link PassportObject }
      */
     public PassportObject getDocContent() {
         return docContent;
@@ -51,11 +42,9 @@ public class DocData {
 
     /**
      * Sets the value of the docContent property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PassportObject }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PassportObject }
      */
     public void setDocContent(PassportObject value) {
         this.docContent = value;

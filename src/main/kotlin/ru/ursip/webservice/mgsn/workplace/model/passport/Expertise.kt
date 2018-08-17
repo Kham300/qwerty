@@ -8,6 +8,7 @@ import javax.persistence.*
 
 @Entity
 @ApiModel("Заключение экспертизы")
+@Table(name = "expertise", schema = "documents")
 class Expertise(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)

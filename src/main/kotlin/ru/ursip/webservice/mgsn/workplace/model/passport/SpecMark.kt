@@ -2,13 +2,11 @@ package ru.ursip.webservice.mgsn.workplace.model.passport
 
 import io.swagger.annotations.ApiModel
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 @ApiModel("Особые пометки")
+@Table(name = "spec_mark", schema = "documents")
 class SpecMark(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)

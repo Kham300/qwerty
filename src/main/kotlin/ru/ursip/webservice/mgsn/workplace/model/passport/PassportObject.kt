@@ -9,6 +9,7 @@ import javax.xml.datatype.XMLGregorianCalendar
 
 @Entity
 @ApiModel("Паспорт объекта")
+@Table(name = "passport_object", schema = "documents")
 class PassportObject(
         @Id
         var id: UUID? = null,
@@ -212,6 +213,19 @@ class PassportObject(
         var rcActDate: LocalDate? = null,
 
         var projCharact: String? = null
+)
+
+data class PassportObjectProjection(
+        var id: UUID? = null,
+        var objFinSourse: String? = null,
+        var deloNum: String? = null,
+        var objAddress: String? = null,
+        var allDistPrefect: String? = null,
+        var objName: String? = null,
+        var orgName: String? = null,
+        var buildStartDate: LocalDate? = null,
+        var buildEndDate: LocalDate? = null,
+        var constrState: String? = null
 )
 
 fun DocData.toDomainPassportObject(): PassportObject? {

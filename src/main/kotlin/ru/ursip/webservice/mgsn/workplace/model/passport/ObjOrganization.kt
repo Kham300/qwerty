@@ -3,13 +3,11 @@ package ru.ursip.webservice.mgsn.workplace.model.passport
 import io.swagger.annotations.ApiModel
 import ru.ursip.webservice.mgsn.workplace.model.passport.generated.PassportObject
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 @ApiModel("Организации")
+@Table(name = "obj_organization", schema = "documents")
 class ObjOrganization(
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
