@@ -21,7 +21,7 @@ class TaskService(val procsEngine: ProcessEngine,
         processInstanceId?.let { tq = tq.processInstanceId(it) }
         processDefinitionId?.let { tq = tq.processDefinitionId(it) }
         processDefinitionKey?.let { tq = tq.processDefinitionKey(it) }
-        tq = tq.includeProcessVariables()
+        if (includeProcessVariables) tq = tq.includeProcessVariables()
         return tq.list().map { it.toRepresentation() }
     }
 

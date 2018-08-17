@@ -207,4 +207,45 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>libs-release</name>
+            <url>http://gitlab.ursip.ru/artifactory/libs-release</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central-local</id>
+            <name>libs-release-local</name>
+            <url>http://gitlab.ursip.ru/artifactory/libs-release-local</url>
+        </repository>
+        <repository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>http://gitlab.ursip.ru/artifactory/libs-snapshot</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>libs-release</name>
+            <url>http://gitlab.ursip.ru/artifactory/libs-release</url>
+        </pluginRepository>
+        <pluginRepository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>http://gitlab.ursip.ru/artifactory/libs-snapshot</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
