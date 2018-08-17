@@ -2,6 +2,7 @@ package ru.ursip.webservice.mgsn.workplace.service.organisation.impl
 
 import au.com.console.jpaspecificationdsl.like
 import au.com.console.jpaspecificationdsl.or
+import org.activiti.engine.TaskService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -11,10 +12,17 @@ import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationFizSe
 import java.util.*
 
 @Service
-class OrganizationFizServiceImpl(private val organizationFizDao: OrganizationFizDao) : OrganizationFizService {
+class OrganizationFizServiceImpl(private val organizationFizDao: OrganizationFizDao,
+                                 private val taskService: TaskService) : OrganizationFizService {
+
     override fun create(organizationFiz: OrganizationFiz): OrganizationFiz {
         if (organizationFiz.id == null) return organizationFizDao.save(organizationFiz)
         else throw Exception("Для создания новой организации ее id Должен быть равен NULL")
+    }
+
+    override fun saveInTask(taskId: String, variableName: String, organizationFiz: OrganizationFiz) {
+        val savedOrganization = organizationFizDao.save(organizationFiz)
+        taskService.setVariable(taskId, variableName, savedOrganization)
     }
 
     override fun update(organizationFiz: OrganizationFiz): OrganizationFiz {

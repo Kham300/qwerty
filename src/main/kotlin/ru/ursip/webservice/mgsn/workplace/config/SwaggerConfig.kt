@@ -1,23 +1,14 @@
 package ru.ursip.webservice.mgsn.workplace.config
 
-import com.fasterxml.classmate.TypeResolver
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.core.Ordered
-import org.springframework.data.domain.Pageable
-import springfox.documentation.builders.AlternateTypeBuilder
-import springfox.documentation.builders.AlternateTypePropertyBuilder
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
-import springfox.documentation.schema.AlternateTypeRule
-import springfox.documentation.schema.AlternateTypeRuleConvention
-import springfox.documentation.schema.AlternateTypeRules.newRule
 import springfox.documentation.service.ApiInfo
 import springfox.documentation.service.Contact
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
 import springfox.documentation.swagger2.annotations.EnableSwagger2
-import java.lang.reflect.Type
 
 
 /**

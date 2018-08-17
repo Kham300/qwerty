@@ -15,4 +15,5 @@ interface OrganizationFizService {
     fun getAll(predicate: OrganizationFizProjection?, pageable: Pageable): Page<OrganizationFiz>
     fun getAllProjection(predicate: OrganizationFizProjection?, pageable: Pageable): Page<OrganizationFizProjection>
     fun getAllExternal(search: String, pageable: Pageable): List<OrganizationFizExternal>
+    fun saveInTask(taskId: String, variableName: String, organizationFiz: OrganizationFiz)
 }

@@ -1,5 +1,6 @@
 package ru.ursip.webservice.mgsn.workplace.service.organisation.impl
 
+import org.activiti.engine.TaskService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -12,11 +13,17 @@ import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationJurSe
 import java.util.*
 
 @Service
-class OrganizationJurServiceImpl(private val organizationJurDao: OrganizationJurDao) : OrganizationJurService {
+class OrganizationJurServiceImpl(private val organizationJurDao: OrganizationJurDao,
+                                 private val taskService: TaskService) : OrganizationJurService {
 
     override fun create(organizationJur: OrganizationJur): OrganizationJur {
         if (organizationJur.id == null) return organizationJurDao.save(organizationJur)
         else throw Exception("Для создания новой организации ее id Должен быть равен NULL")
+    }
+
+    override fun saveInTask(taskId: String, variableName: String, organizationJur: OrganizationJur) {
+        val savedOrganization = organizationJurDao.save(organizationJur)
+        taskService.setVariable(taskId, variableName, savedOrganization)
     }
 
     override fun update(organizationJur: OrganizationJur): OrganizationJur {

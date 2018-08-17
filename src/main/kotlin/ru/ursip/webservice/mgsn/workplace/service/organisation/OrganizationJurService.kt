@@ -13,4 +13,5 @@ interface OrganizationJurService {
     fun deleteById(id: UUID)
     fun getAll(filter: OrganizationJurProjection?, pageable: Pageable): Page<OrganizationJur>
     fun getAllProjection(filter: OrganizationJurProjection?, pageable: Pageable): Page<OrganizationJurProjection>
+    fun saveInTask(taskId: String, variableName: String, organizationJur: OrganizationJur)
 }
