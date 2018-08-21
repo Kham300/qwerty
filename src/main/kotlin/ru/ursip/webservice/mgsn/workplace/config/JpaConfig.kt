@@ -10,7 +10,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = ["ru.ursip.webservice.mgsn.workplace.repository"])
+@EnableJpaRepositories(basePackages = ["ru.ursip.webservice.mgsn.workplace.organisation.repository",
+    "ru.ursip.webservice.mgsn.workplace.passport.repository"])
 class JpaConfig {
     @Bean
     protected fun module(): Module {

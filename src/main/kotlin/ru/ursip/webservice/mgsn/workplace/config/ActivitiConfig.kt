@@ -18,6 +18,7 @@ class ActivitiConfig {
         configuraion.transactionManager = transactionManager
         configuraion.databaseSchemaUpdate = DB_SCHEMA_UPDATE_TRUE
         configuraion.isAsyncExecutorActivate = false
+//        configuraion.init()     Если nullpointer при использовании сервисов раскомментить
         configuraion.initDatabaseEventLogging()
         return configuraion
     }

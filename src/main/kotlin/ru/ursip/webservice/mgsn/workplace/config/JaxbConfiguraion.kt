@@ -12,7 +12,7 @@ class JaxbConfiguraion {
     @Bean
     fun jaxb2Marshaller(): Jaxb2Marshaller {
         val marshaller = Jaxb2Marshaller()
-        marshaller.setContextPaths("ru.ursip.webservice.mgsn.workplace.model.passport.generated")
+        marshaller.setContextPaths("ru.ursip.webservice.mgsn.workplace.passport.model.generated")
         marshaller.setMarshallerProperties(mapOf(Marshaller.JAXB_FORMATTED_OUTPUT to true))
         return marshaller
     }

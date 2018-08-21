@@ -11,12 +11,12 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.domain.PageRequest
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.transaction.annotation.Transactional
-import ru.ursip.webservice.mgsn.workplace.model.activiti.toRepresentation
-import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFiz
-import ru.ursip.webservice.mgsn.workplace.model.organistion.OrganizationFizProjection
-import ru.ursip.webservice.mgsn.workplace.model.organistion.toExternal
-import ru.ursip.webservice.mgsn.workplace.model.organistion.toProjection
-import ru.ursip.webservice.mgsn.workplace.service.organisation.OrganizationFizService
+import ru.ursip.webservice.mgsn.workplace.activiti.model.toRepresentation
+import ru.ursip.webservice.mgsn.workplace.organisation.model.OrganizationFiz
+import ru.ursip.webservice.mgsn.workplace.organisation.model.OrganizationFizProjection
+import ru.ursip.webservice.mgsn.workplace.organisation.model.toExternal
+import ru.ursip.webservice.mgsn.workplace.organisation.model.toProjection
+import ru.ursip.webservice.mgsn.workplace.organisation.service.OrganizationFizService
 
 @SpringBootTest
 @RunWith(SpringRunner::class)
